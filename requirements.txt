@@ -2,3 +2,4 @@ streamlit
 werkzeug
 pyautogui
 opencv-python
+pyvirtualdisplay
