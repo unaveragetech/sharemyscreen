@@ -136,12 +136,12 @@ We welcome contributions to improve ShareMyScreen! If you have suggestions, impr
 
 ## License 📄
 
-This project is licensed under the **MIT License** - see the [LICENSE](https://gist.github.com/unaveragetech/a29c048c8b1ccad062066507bf183d9e) file for details.
+This project is licensed under the **SDUC License** - see the [LICENSE](https://gist.github.com/unaveragetech/a29c048c8b1ccad062066507bf183d9e) file for details.
 
 ---
 
 ### 💬 **Support & Feedback**
-If you need help or want to give feedback, feel free to open an issue or reach out directly through the GitHub discussions page.
+If you need help or want to give feedback, feel free to open an issue or reach out directly through the GitHub discussions page. or via my contact on my profile
 
 ---
 
