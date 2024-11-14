@@ -4,6 +4,7 @@ import pyautogui
 import cv2
 import numpy as np
 import os
+import webbrowser
 
 # File paths for storing users
 VERIFIED_USERS_FILE = "verified_users.txt"
@@ -50,6 +51,27 @@ def register():
     if st.button("Sign Up"):
         save_user_info(username, email, password, UNVERIFIED_USERS_FILE)
         st.success("Registration successful. Please wait for verification.")
+        
+        # Link to request verification
+        st.markdown("If you want to request verification, please fill out [this form](https://formsubmit.co/el/sumuhu).")
+        
+        # Button to open verification request link in a new tab
+        if st.button("Request Verification"):
+            webbrowser.open("https://formsubmit.co/el/sumuhu")
+
+        # Embed the HTML form for direct request submission
+        st.markdown("""
+        <h2>Request Verification</h2>
+        <form target="_blank" action="https://formsubmit.co/el/sumuhu" method="POST">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Full Name" required><br>
+                <input type="email" name="email" class="form-control" placeholder="Email Address" required><br>
+                <textarea placeholder="Why do you want access to view my screen?" class="form-control" name="message" rows="5" required></textarea><br>
+                <button type="submit" class="btn btn-lg btn-dark btn-block">Submit Request</button>
+            </div>
+        </form>
+        """, unsafe_allow_html=True)
 
 # Login Page
 def login():
@@ -66,7 +88,7 @@ def login():
                         st.session_state['username'] = username
                         st.success(f"Welcome back, {username}!")
                     else:
-                        st.error("User not verified. Please contact the administrator.")
+                        st.error("User not verified. Please request verification.")
                     return
         st.error("Invalid username or password.")
 
