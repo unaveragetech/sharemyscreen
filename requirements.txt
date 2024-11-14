@@ -1,5 +1,5 @@
 streamlit
 werkzeug
 pyautogui
-opencv-python
+opencv-python-headless
 pyvirtualdisplay

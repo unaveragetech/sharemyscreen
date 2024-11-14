@@ -26,14 +26,20 @@ call venv\Scripts\activate
 REM Step 4: Install required Python packages
 echo Installing required Python packages...
 pip install -r requirements.txt
+
+REM Step 5: Install PyVirtualDisplay for headless environments (if not already in requirements.txt)
 pip install pyvirtualdisplay
 
-REM Step 5: Create necessary directories and files
+REM Step 6: Install OpenCV dependencies (for Windows, we install opencv-python-headless)
+echo Installing OpenCV dependencies...
+pip install opencv-python-headless
+
+REM Step 7: Create necessary directories and files
 echo Setting up necessary files...
 if not exist "verified_users.txt" type nul > verified_users.txt
 if not exist "unverified_users.txt" type nul > unverified_users.txt
 
-REM Step 6: Generate documentation (README.md)
+REM Step 8: Generate documentation (README.md)
 echo Generating documentation...
 
 (
