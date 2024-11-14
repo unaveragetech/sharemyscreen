@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Setting up the Screen Streaming Application environment..."
+echo "Setting up the Screen Streaming Application environment...youve run ./setup.sh "
 
 # Step 1: Check if Python and pip are installed
 if ! command -v python3 &> /dev/null
@@ -48,6 +48,7 @@ This application allows users to stream their PC screen in real-time through a S
 - **Werkzeug**
 - **PyAutoGUI**
 - **OpenCV**
+end of ./setup.sh
 EOL
 
-echo "Setup complete. Run the application with: streamlit run app.py"
+echo "Setup complete. Run the application with: streamlit run app.py and navigate to the provided url"
