@@ -136,7 +136,7 @@ We welcome contributions to improve ShareMyScreen! If you have suggestions, impr
 
 ## License 📄
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License** - see the [LICENSE]((https://gist.github.com/unaveragetech/a29c048c8b1ccad062066507bf183d9e) file for details.
 
 ---
 
