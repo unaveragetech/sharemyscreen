@@ -34,12 +34,15 @@ REM Step 6: Install OpenCV dependencies (for Windows, we install opencv-python-h
 echo Installing OpenCV dependencies...
 pip install opencv-python-headless
 
-REM Step 7: Create necessary directories and files
+REM Step 7: Install Flask (for serving the Streamlit app in a web server)
+pip install flask
+
+REM Step 8: Create necessary directories and files
 echo Setting up necessary files...
 if not exist "verified_users.txt" type nul > verified_users.txt
 if not exist "unverified_users.txt" type nul > unverified_users.txt
 
-REM Step 8: Generate documentation (README.md)
+REM Step 9: Generate documentation (README.md)
 echo Generating documentation...
 
 (
@@ -50,7 +53,7 @@ echo.
 echo ## How to Use
 echo ### Registration
 echo - Users register with email, username, and password.
-echo - To verify, manually add usernames to ^`verified_users.txt^`.
+echo - To verify, manually add usernames to ^`verified_users.txt^` file.
 echo.
 echo ### Starting the Application
 echo - Activate the virtual environment with:
@@ -69,9 +72,11 @@ echo - **Werkzeug**
 echo - **PyAutoGUI**
 echo - **OpenCV**
 echo - **PyVirtualDisplay** (for headless environments)
+echo - **Flask** (to serve the Streamlit app via Flask)
 echo.
 echo ## Important Notes
 echo - If deploying on a server or headless environment, a virtual display will be started automatically.
 ) > README.md
 
 echo Setup complete. Run the application with: streamlit run app.py and navigate to the provided URL.
+pause

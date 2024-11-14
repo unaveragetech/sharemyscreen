@@ -3,3 +3,4 @@ werkzeug
 pyautogui
 opencv-python-headless
 pyvirtualdisplay
+flask
