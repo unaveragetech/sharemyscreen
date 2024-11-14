@@ -1,187 +1,147 @@
+# ShareMyScreen 📱💻
 
-```markdown
-# Screen Streaming Application 🎥💻
+Welcome to **ShareMyScreen**, a web application that allows users to stream their computer screen in real-time to a web interface. The application also includes a user verification system, settings customization (like FPS adjustment), and the ability to request access to view screens from users who aren't yet verified. 
 
-Welcome to the **Screen Streaming Application**! This app allows users to stream their computer screen in real-time to a web interface. You can also manage settings such as frames per second (FPS) and request user verification for access to the stream.
-
----
-
-## 🚀 Table of Contents
-
-1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Requirements](#requirements)
-4. [Installation](#installation)
-5. [Running the Application](#running-the-application)
-6. [User Registration & Login](#user-registration--login)
-7. [Settings](#settings)
-8. [Screen Streaming](#screen-streaming)
-9. [Verification Request](#verification-request)
-10. [Troubleshooting](#troubleshooting)
-11. [License](#license)
+🚀 This app is designed for **streaming your screen securely** and allowing trusted individuals to watch your screen remotely.
 
 ---
 
-## 🎬 Introduction
+## Table of Contents 📑
 
-This application allows you to stream your screen to a web interface, manage settings like FPS, and provide a secure login system for verified users. If you are not verified, you can easily request to be added to the verified user list by filling out a form.
-
----
-
-## 🌟 Features
-
-- **Screen Streaming**: Stream your desktop to a web page in real-time.
-- **FPS Control**: Adjust the frames per second (FPS) for the stream.
-- **User Registration**: Sign up to request access to the stream.
-- **Login System**: Secure login for registered and verified users.
-- **Verification Request**: If not verified, you can submit a request to be added to the list of verified users.
-- **Responsive UI**: Built with Streamlit for an intuitive and easy-to-use interface.
+1. [Overview](#overview)
+2. [Features ✨](#features)
+3. [Setup Instructions 🛠️](#setup-instructions)
+4. [User Flow](#user-flow)
+5. [Technologies 🛠️](#technologies)
+6. [Contributing 🤝](#contributing)
+7. [License 📄](#license)
 
 ---
 
-## 🛠️ Requirements
+## Overview 👀
 
-Before running the application, make sure you have the following:
+**ShareMyScreen** enables easy screen sharing by streaming your desktop directly to a web page. It also features a simple **user verification** process that ensures only authorized viewers can access the screen stream. With built-in settings, users can **customize their streaming experience**, including adjusting the **frames per second (FPS)** for the stream. The app is built with **Streamlit** for a clean, user-friendly interface.
 
-- **Python 3.7+**
-- **Streamlit**: The app uses Streamlit for the front-end.
-- **PyAutoGUI**: Used to capture the screen.
-- **OpenCV**: Used for image processing.
-- **Werkzeug**: For password hashing.
-
-You can install these dependencies by following the steps below.
+- 🔒 **Verified Users Only:** Users need to request verification to stream their screen, and only verified users are allowed access.
+- 🎥 **Live Streaming:** You can share your screen with live streaming to the web interface.
+- ⚙️ **Custom Settings:** Set FPS for screen streaming to match your preferences or system capabilities.
 
 ---
 
-## 💻 Installation
+## Features ✨
 
-### Step 1: Clone the Repository
+### 🖥️ **Screen Streaming**:
+- Capture your desktop and stream it live to a web interface.
+- **Adjustable FPS:** Customize the FPS to optimize performance based on your system's capabilities.
 
-```bash
-git clone https://github.com/yourusername/screen-streaming-app.git
-cd screen-streaming-app
-```
+### 🔒 **User Verification System**:
+- Users can **request verification** to gain access to screen streaming.
+- **Email Verification**: New users can fill out a request form for verification.
 
-### Step 2: Install Dependencies
-
-To install all the necessary dependencies, run the following:
-
-```bash
-pip install -r requirements.txt
-```
-
-This will install the necessary libraries and dependencies, including Streamlit, PyAutoGUI, OpenCV, and others.
-
----
-
-## 🏃‍♂️ Running the Application
-
-To run the application, execute the following command:
-
-```bash
-streamlit run app.py
-```
-
-This will launch the app in your web browser. You can now access the screen streaming features and user settings.
-
----
-
-## 📝 User Registration & Login
-
-1. **Registration**: 
-   - To start using the app, you'll need to register. 
-   - Provide an **email**, **username**, and **password**.
-   - Your account will be added to a list of unverified users, and you will need to request verification.
-
-2. **Login**:
-   - After registering, you can log in with your **username** and **password**.
-   - If you are a **verified user**, you will have access to the screen streaming feature.
-   - If you are not verified, you will be shown an option to request verification.
-
----
-
-## ⚙️ Settings
-
-After logging in, you can adjust the following settings:
-
-- **Frames per Second (FPS)**: Adjust the FPS for the screen stream. This controls how smooth the video feed is.
-  - Use the slider to select the FPS, ranging from 1 to 60.
+### ⚙️ **Settings**:
+- Easily adjust **FPS** using a slider for smooth streaming.
   
----
+### 🔑 **Login & Registration**:
+- **Register** with an email and password.
+- **Login** securely with username and password.
+- **Unverified users** are given a message to request access through the form.
 
-## 🎥 Screen Streaming
-
-Once you're logged in and have set your FPS, the **Screen Streaming** page will display the live feed from your desktop. You can stream at the selected FPS for as long as you'd like.
-
-- **FPS Display**: The FPS you have chosen will be shown on the stream page, ensuring you are aware of the performance.
-- **Live View**: The screen stream will be updated in real-time as you navigate your desktop.
-
----
-
-## 📩 Verification Request
-
-If you are a **new user** or **not verified**, you can request verification directly through the application.
-
-- You can either:
-  1. Visit the [external verification form](https://formsubmit.co/el/sumuhu) and fill out your details.
-  2. Directly submit the verification request through the embedded form inside the app.
-
-The form will ask for:
-- **Full Name**
-- **Email Address**
-- **Reason for wanting access to the stream**
-
-Once you submit your request, you will be added to the verification list once approved.
+### 📝 **Request Verification**:
+- If you're not yet verified, you can easily submit a request by clicking a button to open a form or using the embedded form within the app.
 
 ---
 
-## ❓ Troubleshooting
+## Setup Instructions 🛠️
 
-- **Unable to login**: Ensure you are using the correct username and password. If the account is unverified, follow the steps above to request verification.
-- **Screen not displaying correctly**: Check that all dependencies are installed properly and that your system supports screen capturing.
-- **App not starting**: Ensure you're running Python 3.7+ and that all dependencies are correctly installed.
+### Prerequisites 🔑
+Before you start, make sure you have the following tools installed:
+- **Python** 3.7+ (Download from [python.org](https://www.python.org/downloads/))
+- **Streamlit** (Install with `pip install streamlit`)
+- **pyautogui** (Install with `pip install pyautogui`)
+- **Werkzeug** (Install with `pip install werkzeug`)
+- **OpenCV** (Install with `pip install opencv-python-headless`)
 
-If you encounter any issues, feel free to submit an issue on the [GitHub repository](https://github.com/yourusername/screen-streaming-app/issues).
+### Step-by-Step Setup
+
+1. **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/unaveragetech/sharemyscreen.git
+    cd sharemyscreen
+    ```
+
+2. **Install dependencies**:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Run the app**:
+
+    Start the Streamlit app by running:
+
+    ```bash
+    streamlit run app.py
+    ```
+
+    This will open the app in your browser where you can sign up, log in, and start streaming your screen.
+
+4. **Create the necessary files**:
+    The app will create `verified_users.txt` and `unverified_users.txt` files when you first run it. Make sure these files are properly set up for the app to store users.
 
 ---
 
-## 📜 License
+## User Flow
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Step 1: **Registration**
+- Go to the registration page to sign up.
+- Enter your email, username, and password to register an account.
+- After registering, users must request verification by filling out a form (either manually or directly through an embedded form).
 
----
+### Step 2: **Login**
+- Once verified, you can log in using your username and password.
+- If you're not verified yet, you'll see a message prompting you to request verification.
 
-## 🛠️ Contributing
+### Step 3: **Start Streaming**
+- After logging in, you can begin streaming your screen.
+- **Adjust FPS** settings in the settings menu to optimize streaming quality.
 
-Feel free to fork the repository and make any enhancements! If you find a bug or have a feature request, please open an issue on the GitHub repository.
-
----
-
-## 🙏 Acknowledgements
-
-- **Streamlit**: For building the web interface.
-- **PyAutoGUI**: For screen capture functionality.
-- **OpenCV**: For handling image processing.
-- **Werkzeug**: For secure password hashing.
-- **FormSubmit.co**: For enabling easy email submission forms.
+### Step 4: **Request Verification**
+- If you're a new user, click the button to open a verification form in your browser or fill out the embedded form directly within the app.
 
 ---
 
-Enjoy the stream, and feel free to contribute or report any issues! 🎉
-```
+## Technologies 🛠️
 
-### Key Sections in the `README.md`:
+- **Streamlit**: For building the interactive web interface.
+- **OpenCV**: For capturing the screen and compressing images for streaming.
+- **pyautogui**: To capture the screen and handle screen input.
+- **Werkzeug**: For securely handling passwords.
 
-- **Table of Contents**: Lists the main sections of the document for easy navigation.
-- **Introduction**: Provides a brief overview of the application’s purpose and features.
-- **Features**: Details key functionalities like screen streaming, user registration, login, and settings.
-- **Installation**: Provides step-by-step instructions on how to set up and install the application.
-- **Running the Application**: Explains how to launch the app.
-- **User Registration & Login**: Details the process of registering, logging in, and how the verification system works.
-- **Settings**: Describes the available settings and how users can adjust FPS.
-- **Screen Streaming**: Explains the screen streaming functionality and how to access it.
-- **Verification Request**: Outlines the process for unverified users to request verification.
-- **Troubleshooting**: Lists potential issues and solutions.
-- **License**: Includes the licensing information.
-- **Contributing**: Encourages contributions and opens up the repository for enhancements.
-- **Acknowledgements**: Credits the libraries and services used in the project.
+---
+
+## Contributing 🤝
+
+We welcome contributions to improve ShareMyScreen! If you have suggestions, improvements, or bug fixes, feel free to fork the repo and create a pull request.
+
+### How to Contribute:
+1. Fork the repository.
+2. Clone your fork to your local machine.
+3. Create a new branch: `git checkout -b feature-name`
+4. Make your changes and commit them: `git commit -m 'Add new feature'`
+5. Push to your branch: `git push origin feature-name`
+6. Open a pull request with a detailed description of the changes.
+
+---
+
+## License 📄
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+### 💬 **Support & Feedback**
+If you need help or want to give feedback, feel free to open an issue or reach out directly through the GitHub discussions page.
+
+---
+
